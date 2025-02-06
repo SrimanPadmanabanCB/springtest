@@ -12,4 +12,3 @@ jobs:
     steps:
       - name: Get source code
         uses: cloudbees-io/checkout@v1
-
