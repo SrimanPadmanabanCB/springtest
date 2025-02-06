@@ -7,11 +7,6 @@ on:
     branches:
       - "**"
       
-permissions:
-  scm-token-own: read
-  scm-token-org: read
-  id-token: write
-
 jobs:
   build-publish:
     steps:
