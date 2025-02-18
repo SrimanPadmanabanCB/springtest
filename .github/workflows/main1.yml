@@ -1,0 +1,36 @@
+name: Hello World Workflow
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"  # Runs every day at midnight UTC
+  workflow_dispatch:
+  push:
+    branches:
+      - test
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Hello World from Build
+        run: echo "Hello, World from Build!"
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Hello World from Test
+        run: echo "Hello, World from Test!"
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Hello World from Deploy
+        run: echo "Hello, World from Deploy!"
+
+        
