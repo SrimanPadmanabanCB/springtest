@@ -10,9 +10,24 @@ on:
   workflow_dispatch:  # Allows manual execution
 
 jobs:
-  say-hello:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print Hello World
-        run: echo "Hello, World! 🚀"
+      - name: Print Hello World from Build
+        run: echo "Hello, World from Build!"
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Hello World from Test
+        run: echo "Hello, World from Test!"
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Hello World from Deploy
+        run: echo "Hello, World from Deploy!"
+        
