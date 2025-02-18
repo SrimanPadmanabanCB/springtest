@@ -2,7 +2,7 @@ name: Hello World Workflow
 
 on:
   schedule:
-    - cron: "1 0 * * *"  # Runs every day at midnight UTC
+    - cron: "*/10 0 * * *"  # Runs every day at midnight UTC
   workflow_dispatch:
   push:
     branches:
