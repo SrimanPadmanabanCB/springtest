@@ -2,27 +2,17 @@ name: Hello World Workflow
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:  # Allows manual execution
 
 jobs:
-  build:
+  say-hello:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print Hello World from Build
-        run: echo "Hello, World from Build!"
-
-  test:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Print Hello World from Test
-        run: echo "Hello, World from Test!"
-
-  deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Print Hello World from Deploy
-        run: echo "Hello, World from Deploy!"
-
+      - name: Print Hello World
+        run: echo "Hello, World! 🚀"
