@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - test
+      - master
   pull_request:
     branches:
       - master
@@ -17,20 +17,26 @@ jobs:
 
     steps:
       - name: Print Hello World from Build
-        run: echo "Hello, World from Build!"
+        run: |
+          echo "Hello, World from Build!"
+          sleep 10
 
   test:
     runs-on: ubuntu-latest
 
     steps:
       - name: Print Hello World from Test
-        run: echo "Hello, World from Test!"
+        run: | 
+          echo "Hello, World from Test!"
+          sleep 15
 
   deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Print Hello World from Deploy
-        run: echo "Hello, World from Deploy!"
+        run: |
+          echo "Hello, World from Deploy!"
+          sleep 10
 
         
